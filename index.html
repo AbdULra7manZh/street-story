@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street Story</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Street Story</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="images/video1.mp4" type="video/mp4">
+        </video>
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+            <h1>Discover the Story Behind Every Street Name</h1>
+            <p>
+                Street Story AR is a cultural and smart tourism project that helps users explore
+                why streets were named this way and learn the story behind them.
+            </p>
+            <a href="#idea" class="btn">Explore the Idea</a>
+        </div>
+    </section>
+
+    <section id="idea" class="info-section">
+        <h2>Project Idea</h2>
+        <p>
+            Our project connects technology with culture by presenting the stories behind selected
+            street names in a simple and interactive way. The user can browse street names through
+            the website and later use the camera feature to view extra information through AR markers.
+        </p>
+    </section>
+    <section class="streets">
+
+        <section id="streets" class="streets">
+            <h2>Streets</h2>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>King Fahd Road</h3>
+                    <p>Named after King Fahd, one of Saudi Arabia’s most influential leaders.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Prince Sultan Street</h3>
+                    <p>Named after Prince Sultan, known for his role in national development.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Palestine Street</h3>
+                    <p>A symbolic name reflecting cultural and historical significance.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="list" class="list-section">
+            <h2>Why Street Names Matter</h2>
+            <ul>
+                <li>Reflect cultural identity</li>
+                <li>Preserve historical figures</li>
+                <li>Help navigation</li>
+                <li>Connect people to heritage</li>
+            </ul>
+            <br>
+            <br>
+        </section>
+
+        <section id="table" class="table-section">
+            <h2>Street Information Table</h2>
+
+            <table>
+                <tr>
+                    <th>Street Name</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>King Fahd Road</td>
+                    <td>Main Road</td>
+                    <td>Named after King Fahd</td>
+                </tr>
+                <tr>
+                    <td>Prince Sultan Street</td>
+                    <td>City Road</td>
+                    <td>Named after Prince Sultan</td>
+                </tr>
+                <tr>
+                    <td>Palestine Street</td>
+                    <td>Urban Street</td>
+                    <td>Cultural significance</td>
+                </tr>
+            </table>
+        </section>
+        <section class="map-section">
+            <h2>Explore Streets Map</h2>
+            <img src="images/street-map.jpg" usemap="#streetmap" width="500">
+            <map name="streetmap">
+                <area shape="rect" coords="150,0,350,150" href="about.html" alt="About Us">
+                <area shape="rect" coords="80,150,200,350" href="#streets" alt="Streets Section">
+                <area shape="rect" coords="300,150,420,350" href="#list" alt="List Section">
+                <area shape="rect" coords="120,300,380,500" href="#table" alt="Table Section">
+            </map>
+            <br>
+            <a href="login.html">Login</a>
+        </section>
+        <script src="script.js"></script>
+        <script>
+            console.log("Website Loaded Successfully");
+        </script>
+</body>
+
+</html>
