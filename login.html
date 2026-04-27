@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Street Story</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <nav class="navbar">
@@ -25,12 +27,14 @@
             <h2>Welcome Back</h2>
             <p class="login-text">Login to continue exploring the stories behind street names.</p>
 
-            <form class="form">
+            <form class="form" id="loginForm">
                 <label for="email">Email:</label>
-                <input id="email" type="email" placeholder="Enter your email" required>
+                <input id="email" type="email" placeholder="Enter your email">
 
                 <label for="password">Password:</label>
-                <input id="password" type="password" placeholder="Enter your password" required>
+                <input id="password" type="password" placeholder="Enter your password">
+
+                <p id="loginMessage"></p>
 
                 <button type="submit">Login</button>
             </form>
@@ -39,4 +43,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

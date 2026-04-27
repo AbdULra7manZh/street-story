@@ -48,23 +48,22 @@
 
         <section id="streets" class="streets">
             <h2>Streets</h2>
+            <div class="cards" id="dynamicCards"></div>
+        </section>
 
-            <div class="cards">
-                <div class="card">
-                    <h3>King Fahd Road</h3>
-                    <p>Named after King Fahd, one of Saudi Arabia’s most influential leaders.</p>
-                </div>
+        <section class="dynamic-story">
+            <h2>Street Story Preview</h2>
 
-                <div class="card">
-                    <h3>Prince Sultan Street</h3>
-                    <p>Named after Prince Sultan, known for his role in national development.</p>
-                </div>
+            <img id="streetImage" src="images/street1.jpg" alt="Street Story Image" class="dynamic-img">
 
-                <div class="card">
-                    <h3>Palestine Street</h3>
-                    <p>A symbolic name reflecting cultural and historical significance.</p>
-                </div>
-            </div>
+            <h3 id="streetTitle">King Fahd Road</h3>
+
+            <p id="streetDescription">
+                Named after King Fahd, one of Saudi Arabia’s most influential leaders.
+            </p>
+
+            <button id="nextStoryBtn" class="btn">Next Story</button>
+            <button id="themeBtn" class="btn">Change Theme</button>
         </section>
 
         <section id="list" class="list-section">
@@ -105,6 +104,7 @@
                 </tr>
             </table>
         </section>
+
         <section class="map-section">
             <h2>Explore Streets Map</h2>
             <img src="images/street-map.jpg" usemap="#streetmap" width="500">

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - Street Story</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <nav class="navbar">
@@ -25,23 +27,26 @@
             <h2>Create Account</h2>
             <p class="login-text">Join Street Story and start discovering the stories behind street names.</p>
 
-            <form class="form">
+            <form class="form" id="signupForm">
                 <label for="fullname">Full Name:</label>
-                <input id="fullname" type="text" placeholder="Enter your full name" required>
+                <input id="fullname" type="text" placeholder="Enter your full name">
 
-                <label for="email">Email:</label>
-                <input id="email" type="email" placeholder="Enter your email" required>
+                <label for="signupEmail">Email:</label>
+                <input id="signupEmail" type="email" placeholder="Enter your email">
 
-                <label for="password">Password:</label>
-                <input id="password" type="password" placeholder="Enter your password" required>
+                <label for="signupPassword">Password:</label>
+                <input id="signupPassword" type="password" placeholder="Enter your password">
 
-                <label for="confirm-password">Confirm Password:</label>
-                <input id="confirm-password" type="password" placeholder="Confirm your password" required>
+                <label for="confirmPassword">Confirm Password:</label>
+                <input id="confirmPassword" type="password" placeholder="Confirm your password">
+
+                <p id="signupMessage"></p>
 
                 <button type="submit">Sign Up</button>
             </form>
         </div>
     </section>
-
+    <script src="script.js"></script>
 </body>
+
 </html>

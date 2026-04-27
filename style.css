@@ -419,3 +419,46 @@ tr:nth-child(even) {
 .card:hover {
     transform: translateY(-10px);
 }
+
+<!--         -->
+
+#loginMessage,#signupMessage {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+<!--         -->
+
+.dynamic-story {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #f8fafc;
+    min-height: 100vh;
+    width: 100%;
+}
+.dynamic-story h2 {
+    font-size: 34px;
+    margin-bottom: 25px;
+    color: #0f172a;
+}
+.dynamic-img {
+    width: 420px;
+    max-width: 90%;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+}
+#streetTitle {
+    font-size: 28px;
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+#streetDescription {
+    max-width: 700px;
+    margin: 0 auto 25px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #475569;
+}
