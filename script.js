@@ -155,3 +155,56 @@ if (dynamicCards) {
         `;
     });
 }
+
+
+// CPIS-360-----------------------------
+const openCameraBtn = document.getElementById("openCameraBtn");
+const arContainer = document.getElementById("arContainer");
+const arSceneBox = document.getElementById("arSceneBox");
+const closeCameraBtn = document.getElementById("closeCameraBtn");
+if (openCameraBtn) {
+    openCameraBtn.addEventListener("click", function () {
+        arContainer.style.display = "block";
+
+        arSceneBox.innerHTML = `
+            <a-scene embedded arjs>
+                <a-marker preset="hiro">
+
+                    <a-plane
+                        position="0 0.5 0"
+                        rotation="-90 0 0"
+                        width="4"
+                        height="2.4"
+                        color="#0f172a"
+                        material="opacity: 0.9">
+                    </a-plane>
+
+                    <a-text
+                        value="King Fahd Road"
+                        position="-1.7 1.2 0.1"
+                        rotation="-90 0 0"
+                        color="#fbbf24"
+                        width="4">
+                    </a-text>
+
+                    <a-text
+                        value="Street Details:\\nOne of the main roads in Riyadh.\\n\\nReason of Naming:\\nNamed after King Fahd bin Abdulaziz.\\n\\nExtra Info:\\nIt connects important areas in the city."
+                        position="-1.7 0.65 0.1"
+                        rotation="-90 0 0"
+                        color="#ffffff"
+                        width="3.4">
+                    </a-text>
+
+                </a-marker>
+
+                <a-entity camera></a-entity>
+            </a-scene>
+        `;
+    });
+}
+if (closeCameraBtn) {
+    closeCameraBtn.addEventListener("click", function () {
+        location.reload();
+    });
+}
+//-------------------------------

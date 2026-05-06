@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Street Story</title>
     <link rel="stylesheet" href="style.css">
+    
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.4.5/aframe/build/aframe-ar.js"></script>
+ 
 </head>
 
 <body>
@@ -66,7 +70,18 @@
             <button id="themeBtn" class="btn">Change Theme</button>
         </section>
 
+        
+        <section class="ar-section">
+            <h2>Try Street Story AR</h2>
+            <p>Open your camera and scan the marker to discover the street story.</p>
+            <button id="openCameraBtn" class="btn">Open Camera</button>
+        </section>
+        <div id="arContainer" class="ar-container">
+            <button id="closeCameraBtn" class="close-ar">Close Camera</button>
+            <div id="arSceneBox"></div>
+        </div>
         <section id="list" class="list-section">
+        
             <h2>Why Street Names Matter</h2>
             <ul>
                 <li>Reflect cultural identity</li>

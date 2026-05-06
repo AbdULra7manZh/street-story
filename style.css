@@ -462,3 +462,41 @@ tr:nth-child(even) {
     line-height: 1.7;
     color: #475569;
 }
+
+
+
+.ar-section {
+    text-align: center;
+    padding: 70px 20px;
+    background-color: #f4f1ea;
+}
+.ar-section h2 {
+    font-size: 34px;
+    color: #0f172a;
+    margin-bottom: 15px;
+}
+.ar-section p {
+    color: #475569;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+.ar-container {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: black;
+}
+.close-ar {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 10000;
+    background: #fbbf24;
+    color: #0f172a;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
