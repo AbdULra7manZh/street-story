@@ -484,8 +484,16 @@ tr:nth-child(even) {
     display: none;
     position: fixed;
     inset: 0;
+    width: 100vw;
+    height: 100vh;
     z-index: 9999;
     background: black;
+    overflow: hidden;
+}
+#arSceneBox,
+#arSceneBox a-scene {
+    width: 100vw;
+    height: 100vh;
 }
 .close-ar {
     position: fixed;

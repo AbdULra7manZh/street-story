@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Street Story</title>
     <link rel="stylesheet" href="style.css">
-    
+
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.4.5/aframe/build/aframe-ar.js"></script>
- 
+
 </head>
 
 <body>
@@ -70,72 +70,68 @@
             <button id="themeBtn" class="btn">Change Theme</button>
         </section>
 
-        
+
         <section class="ar-section">
             <h2>Try Street Story AR</h2>
             <p>Open your camera and scan the marker to discover the street story.</p>
-            <button id="openCameraBtn" class="btn">Open Camera</button>
-        </section>
-        <div id="arContainer" class="ar-container">
-            <button id="closeCameraBtn" class="close-ar">Close Camera</button>
-            <div id="arSceneBox"></div>
-        </div>
-        <section id="list" class="list-section">
-        
-            <h2>Why Street Names Matter</h2>
-            <ul>
-                <li>Reflect cultural identity</li>
-                <li>Preserve historical figures</li>
-                <li>Help navigation</li>
-                <li>Connect people to heritage</li>
-            </ul>
-            <br>
-            <br>
+
+            <a href="ar.html" class="btn">Open Camera</a>
         </section>
 
-        <section id="table" class="table-section">
-            <h2>Street Information Table</h2>
+        <h2>Why Street Names Matter</h2>
+        <ul>
+            <li>Reflect cultural identity</li>
+            <li>Preserve historical figures</li>
+            <li>Help navigation</li>
+            <li>Connect people to heritage</li>
+        </ul>
+        <br>
+        <br>
+    </section>
 
-            <table>
-                <tr>
-                    <th>Street Name</th>
-                    <th>Type</th>
-                    <th>Description</th>
-                </tr>
-                <tr>
-                    <td>King Fahd Road</td>
-                    <td>Main Road</td>
-                    <td>Named after King Fahd</td>
-                </tr>
-                <tr>
-                    <td>Prince Sultan Street</td>
-                    <td>City Road</td>
-                    <td>Named after Prince Sultan</td>
-                </tr>
-                <tr>
-                    <td>Palestine Street</td>
-                    <td>Urban Street</td>
-                    <td>Cultural significance</td>
-                </tr>
-            </table>
-        </section>
+    <section id="table" class="table-section">
+        <h2>Street Information Table</h2>
 
-        <section class="map-section">
-            <h2>Explore Streets Map</h2>
-            <img src="images/street-map.jpg" usemap="#streetmap" width="500">
-            <map name="streetmap">
-                <area shape="rect" coords="150,0,350,150" href="about.html" alt="About Us">
-                <area shape="rect" coords="80,150,200,350" href="#streets" alt="Streets Section">
-                <area shape="rect" coords="300,150,420,350" href="#list" alt="List Section">
-                <area shape="rect" coords="120,300,380,500" href="#table" alt="Table Section">
-            </map>
-            <br>
-            <a href="login.html">Login</a>
-        </section>
-        <script src="script.js"></script>
-        <script>
-            console.log("Website Loaded Successfully");
-        </script>
+        <table>
+            <tr>
+                <th>Street Name</th>
+                <th>Type</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>King Fahd Road</td>
+                <td>Main Road</td>
+                <td>Named after King Fahd</td>
+            </tr>
+            <tr>
+                <td>Prince Sultan Street</td>
+                <td>City Road</td>
+                <td>Named after Prince Sultan</td>
+            </tr>
+            <tr>
+                <td>Palestine Street</td>
+                <td>Urban Street</td>
+                <td>Cultural significance</td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="map-section">
+        <h2>Explore Streets Map</h2>
+        <img src="images/street-map.jpg" usemap="#streetmap" width="500">
+        <map name="streetmap">
+            <area shape="rect" coords="150,0,350,150" href="about.html" alt="About Us">
+            <area shape="rect" coords="80,150,200,350" href="#streets" alt="Streets Section">
+            <area shape="rect" coords="300,150,420,350" href="#list" alt="List Section">
+            <area shape="rect" coords="120,300,380,500" href="#table" alt="Table Section">
+        </map>
+        <br>
+        <a href="login.html">Login</a>
+    </section>
+    <script src="script.js"></script>
+    <script>
+        console.log("Website Loaded Successfully");
+    </script>
 </body>
 
 </html>

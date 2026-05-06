@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Street Story AR</title>
+
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.4.5/aframe/build/aframe-ar.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .close-ar {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            z-index: 9999;
+            background: #fbbf24;
+            color: #0f172a;
+            padding: 12px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="index.html" class="close-ar">Close Camera</a>
+
+    <a-scene
+        embedded
+        vr-mode-ui="enabled: false"
+        renderer="logarithmicDepthBuffer: true;"
+        arjs="sourceType: webcam; trackingMethod: best; debugUIEnabled: false;">
+
+        <a-marker preset="hiro">
+
+            <a-plane
+                position="0 0.5 0"
+                rotation="-90 0 0"
+                width="4"
+                height="2.4"
+                color="#0f172a"
+                material="opacity: 0.9">
+            </a-plane>
+
+            <a-text
+                value="King Fahd Road"
+                position="-1.7 1.2 0.1"
+                rotation="-90 0 0"
+                color="#fbbf24"
+                width="4">
+            </a-text>
+
+            <a-text
+                value="Street Details:\nOne of the main roads in Riyadh.\n\nReason of Naming:\nNamed after King Fahd bin Abdulaziz.\n\nExtra Info:\nIt connects important areas in the city."
+                position="-1.7 0.65 0.1"
+                rotation="-90 0 0"
+                color="#ffffff"
+                width="3.4">
+            </a-text>
+
+        </a-marker>
+
+        <a-entity camera></a-entity>
+
+    </a-scene>
+
+</body>
+</html>
