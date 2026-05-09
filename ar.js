@@ -23,3 +23,27 @@ function fillStreetCard(markerCode) {
 fillStreetCard("KAR");
 fillStreetCard("JCR");
 fillStreetCard("PS");
+
+const mapBtn = document.getElementById("mapBtn");
+function setupMarkerEvents(markerCode) {
+
+    const marker = document.querySelector(
+        `a-marker[url="markers/pattern-${markerCode}.patt"]`
+    );
+
+    marker.addEventListener("markerFound", () => {
+
+        const street = streetsInfo[markerCode];
+
+        mapBtn.style.display = "block";
+        mapBtn.href = street.mapLink;
+    });
+
+    marker.addEventListener("markerLost", () => {
+
+        mapBtn.style.display = "none";
+    });
+}
+setupMarkerEvents("KAR");
+setupMarkerEvents("JCR");
+setupMarkerEvents("PS");

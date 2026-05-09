@@ -8,105 +8,112 @@
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.4.5/aframe/build/aframe-ar.js"></script>
 
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-        }
-
-        .close-ar {
-            position: fixed;
-            top: 15px;
-            right: 15px;
-            z-index: 9999;
-            background: #fbbf24;
-            color: #0f172a;
-            padding: 12px 18px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            font-family: Arial, sans-serif;
-        }
-    </style>
+    <link rel="stylesheet" href="ArStyle.css">
 </head>
 
 <body>
-    <a href="index.html" class="close-ar">Close Camera</a>
+   <a href="index.html" class="close-ar">Close Camera</a>
+
+    <a id="mapBtn" class="map-btn" target="_blank">
+        Open Location
+    </a>
 
     <a-scene embedded vr-mode-ui="enabled: false" renderer="logarithmicDepthBuffer: true;"
         arjs="sourceType: webcam; trackingMethod: best; debugUIEnabled: false;">
+
         <!-- KAR -->
-        <a-marker type="pattern" url="markers/pattern-KAR.patt">
+        <a-marker type="pattern" url="markers/pattern-KAR.patt" smooth="true" smooth-count="5" 
+        smooth-tolerance="0.05" smooth-threshold="2">
+            <a-entity position="0 0 0" rotation="-90 0 0">
 
-            <!-- CARD CONTAINER -->
-            <a-entity id="cardKAR" position="0 0.5 0" rotation="-90 0 0">
-
-                <!-- BACKGROUND -->
-                <a-plane id="cardBackgroundKAR" position="0 0 -0.02" width="5" height="2.8" color="#8B6B00"
-                    material="opacity: 0.88">
+                <a-plane id="cardBackgroundKAR" position="0 0 -0.01"
+                    width="5" height="2.8" color="#8B6B00"
+                    material="opacity: 0.88; depthWrite: false">
                 </a-plane>
 
-                <!-- IMAGE FRAME -->
-                <a-plane position="1.4 0 0" width="1.6" height="2" color="#ffffff">
+                <a-plane position="1.6 0.4 0.01"
+                    width="1.5" height="2.0" color="#ffffff">
                 </a-plane>
 
-                <!-- STREET IMAGE -->
-                <a-image id="streetImageKAR" position="1.4 0 0.02" width="1.45" height="1.8">
+                <a-image id="streetImageKAR" position="1.6 0.4 0.02"
+                    width="1.35" height="1.85">
                 </a-image>
 
-                <!-- STREET NAME -->
-                <a-text id="streetNameKAR" value="TEST TITLE" position="-1.8 0.9 0.15" color="#ffffff" width="3.2"
-                    anchor="left" material="depthTest: false">
-                </a-text>
+                <a-text id="streetNameKAR" value="" position="-2.2 1.0 0.05"
+                    color="#fbbf24"
+                    width="2.8"
+                    anchor="left"
+                    baseline="top"
+                    wrap-count="22">
+                    </a-text>
 
-                <!-- STREET INFO -->
-                <a-text id="streetInfoKAR" value="TEST INFO" position="-1.8 0.3 0.15" color="#ffffff" width="2.6"
-                    anchor="left" material="depthTest: false">
+                <a-text id="streetInfoKAR" value="" position="-2.3 0.5 0.05"
+                    color="#ffffff" width="2.4"
+                    anchor="left" baseline="top" wrap-count="30">
                 </a-text>
 
             </a-entity>
-
-        </a-marker>
-        <!--        JCR      -->
-        <a-marker type="pattern" url="markers/pattern-JCR.patt">
-
-            <a-plane id="cardBackgroundJCR" position="0 0.5 0" rotation="-90 0 0" width="5" height="2.8" color="#0f172a"
-                material="opacity: 0.92">
-            </a-plane>
-
-            <a-plane position="1.25 0.5 0.08" rotation="-90 0 0" width="1.8" height="2.1" color="#ffffff">
-            </a-plane>
-
-            <a-image id="streetImageJCR" position="1.25 0.5 0.25" rotation="-90 0 0" width="1.65" height="1.95">
-            </a-image>
-
-            <a-text id="streetNameJCR" position="-2.2 1.35 0.25" rotation="-90 0 0" color="#fbbf24" width="4">
-            </a-text>
-
-            <a-text id="streetInfoJCR" position="-2.2 0.9 0.25" rotation="-90 0 0" color="#ffffff" width="3.2">
-            </a-text>
-
         </a-marker>
 
-        <!--        PS      -->
+        <!-- JCR -->
+        <a-marker type="pattern" url="markers/pattern-JCR.patt" smooth="true" smooth-count="5" 
+        smooth-tolerance="0.05" smooth-threshold="2">
+            <a-entity position="0 0 0" rotation="-90 0 0">
+
+                <a-plane id="cardBackgroundJCR" position="0 0 -0.01"
+                    width="5" height="2.8" color="#0A4D68"
+                    material="opacity: 0.92; depthWrite: false">
+                </a-plane>
+
+                <a-plane position="1.6 0.4 0.01"
+                    width="1.5" height="2.0" color="#ffffff">
+                </a-plane>
+
+                <a-image id="streetImageJCR" position="1.6 0.4 0.02"
+                    width="1.35" height="1.85">
+                </a-image>
+
+                <a-text id="streetNameJCR" value="" position="-2.3 1.0 0.05"
+                    color="#fbbf24" width="1.8"
+                    anchor="left" baseline="top" wrap-count="16">
+                </a-text>
+
+                <a-text id="streetInfoJCR" value="" position="-2.3 0.5 0.05"
+                    color="#ffffff" width="2.0"
+                    anchor="left" baseline="top" wrap-count="30">
+                </a-text>
+
+            </a-entity>
+        </a-marker>
+
+        <!-- PS -->
         <a-marker type="pattern" url="markers/pattern-PS.patt">
+            <a-entity position="0 0 0" rotation="-90 0 0">
 
-            <a-plane id="cardBackgroundPS" position="0 0.5 0" rotation="-90 0 0" width="5" height="2.8" color="#0f172a"
-                material="opacity: 0.92">
-            </a-plane>
+                <a-plane id="cardBackgroundPS" position="0 0 -0.01"
+                    width="5" height="2.8" color="#2E7D32"
+                    material="opacity: 0.92; depthWrite: false">
+                </a-plane>
 
-            <a-plane position="1.25 0.5 0.08" rotation="-90 0 0" width="1.8" height="2.1" color="#ffffff">
-            </a-plane>
+                <a-plane position="1.6 0.4 0.01"
+                    width="1.5" height="2.0" color="#ffffff">
+                </a-plane>
 
-            <a-image id="streetImagePS" position="1.25 0.5 0.25" rotation="-90 0 0" width="1.65" height="1.95">
-            </a-image>
+                <a-image id="streetImagePS" position="1.6 0.4 0.02"
+                    width="1.35" height="1.85">
+                </a-image>
 
-            <a-text id="streetNamePS" position="-2.2 1.35 0.25" rotation="-90 0 0" color="#fbbf24" width="4">
-            </a-text>
+                <a-text id="streetNamePS" value="" position="-2.3 1.0 0.05"
+                    color="#fbbf24" width="2.4"
+                    anchor="left" baseline="top" wrap-count="16">
+                </a-text>
 
-            <a-text id="streetInfoPS" position="-2.2 0.9 0.25" rotation="-90 0 0" color="#ffffff" width="3.2">
-            </a-text>
+                <a-text id="streetInfoPS" value="" position="-2.3 0.5 0.05"
+                    color="#ffffff" width="2.5"
+                    anchor="left" baseline="top" wrap-count="30">
+                </a-text>
 
+            </a-entity>
         </a-marker>
 
         <a-entity camera></a-entity>
