@@ -18,13 +18,18 @@
         Open Location
     </a>
 
+    <div class="zoom-controls">
+    <button id="zoomInBtn">+</button>
+    <button id="zoomOutBtn">-</button>
+</div>
+
     <a-scene embedded vr-mode-ui="enabled: false" renderer="logarithmicDepthBuffer: true;"
-        arjs="sourceType: webcam; trackingMethod: best; debugUIEnabled: false;">
+        arjs="sourceType: webcam; trackingMethod: best; debugUIEnabled: false;" style="pointer-events: none;">
 
         <!-- KAR -->
         <a-marker type="pattern" url="markers/pattern-KAR.patt" smooth="true" smooth-count="5" 
         smooth-tolerance="0.05" smooth-threshold="2">
-            <a-entity position="0 0 0" rotation="-90 0 0">
+            <a-entity id="infoCardKAR" class="info-card" position="0 0 0" rotation="-90 0 0">
 
                 <a-plane id="cardBackgroundKAR" position="0 0 -0.01"
                     width="5" height="2.8" color="#8B6B00"
@@ -48,7 +53,7 @@
                     </a-text>
 
                 <a-text id="streetInfoKAR" value="" position="-2.3 0.5 0.05"
-                    color="#ffffff" width="2.4"
+                    color="#ffffff" width="2.0"
                     anchor="left" baseline="top" wrap-count="30">
                 </a-text>
 
@@ -58,7 +63,7 @@
         <!-- JCR -->
         <a-marker type="pattern" url="markers/pattern-JCR.patt" smooth="true" smooth-count="5" 
         smooth-tolerance="0.05" smooth-threshold="2">
-            <a-entity position="0 0 0" rotation="-90 0 0">
+           <a-entity id="infoCardJCR" class="info-card" position="0 0 0" rotation="-90 0 0">
 
                 <a-plane id="cardBackgroundJCR" position="0 0 -0.01"
                     width="5" height="2.8" color="#0A4D68"
@@ -88,7 +93,7 @@
 
         <!-- PS -->
         <a-marker type="pattern" url="markers/pattern-PS.patt">
-            <a-entity position="0 0 0" rotation="-90 0 0">
+            <a-entity id="infoCardPS" class="info-card" position="0 0 0" rotation="-90 0 0">
 
                 <a-plane id="cardBackgroundPS" position="0 0 -0.01"
                     width="5" height="2.8" color="#2E7D32"
@@ -109,7 +114,7 @@
                 </a-text>
 
                 <a-text id="streetInfoPS" value="" position="-2.3 0.5 0.05"
-                    color="#ffffff" width="2.5"
+                    color="#ffffff" width="2.0"
                     anchor="left" baseline="top" wrap-count="30">
                 </a-text>
 
@@ -121,6 +126,7 @@
     </a-scene>
     <script src="info.js"></script>
     <script src="ar.js"></script>
+
 
 </body>
 

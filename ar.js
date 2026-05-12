@@ -9,8 +9,9 @@ function fillStreetCard(markerCode) {
             "value",
             "City: " + street.city +
             "\n\nAbout: " + street.description +
-            "\n\nFamous For: " + street.famousFor +
-            "\n\nLandmark: " + street.landmark
+            "\n\n☕ Cafes: " + street.cafes +
+            "\n\n🍴 Restaurants: " + street.restaurants +
+            "\n\n🏨 Hotels: " + street.hotels
         );
 
     document.getElementById("streetImage" + markerCode)
@@ -47,3 +48,27 @@ function setupMarkerEvents(markerCode) {
 setupMarkerEvents("KAR");
 setupMarkerEvents("JCR");
 setupMarkerEvents("PS");
+
+let zoomLevel = 1;
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    document.getElementById("zoomInBtn").addEventListener("click", function () {
+        zoomLevel += 0.1;
+
+        document.querySelectorAll(".info-card").forEach(card => {
+            card.setAttribute("scale", `${zoomLevel} ${zoomLevel} ${zoomLevel}`);
+        });
+    });
+
+    document.getElementById("zoomOutBtn").addEventListener("click", function () {
+        if (zoomLevel > 0.5) {
+            zoomLevel -= 0.1;
+
+            document.querySelectorAll(".info-card").forEach(card => {
+                card.setAttribute("scale", `${zoomLevel} ${zoomLevel} ${zoomLevel}`);
+            });
+        }
+    });
+
+});
