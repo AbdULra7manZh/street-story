@@ -1,0 +1,67 @@
+{
+ "KAR": {
+  "en": {
+    "name": "King Abdulaziz Road",
+    "city": "Jeddah",
+    "description": "A major road connecting north and central Jeddah.",
+    "cafes": "95Celsius, The Earth, Starbucks",
+    "restaurants": "Shrimp Zone, TGI Fridays, Olive Garden",
+    "hotels": "Ibis Hotel, Joudyan Hotel, Seafront Hotel"
+  },
+
+  "ar": {
+    "name": "طريق الملك عبدالعزيز",
+    "city": "جدة",
+    "description": "طريق رئيسي يربط شمال جدة بوسطها.",
+    "cafes": "95Celsius، The Earth، Starbucks",
+    "restaurants": "Shrimp Zone، TGI Fridays، Olive Garden",
+    "hotels": "Ibis Hotel، Joudyan Hotel، Seafront Hotel"
+  },
+
+  "image": "images/KAR.jpg",
+  "cardColor": "#8B6B00",
+  "mapLink": "https://maps.app.goo.gl/HyNq2Mr66E7wZCcGA?g_st=ic"
+},
+  "JCR": {
+  "en": {
+    "name": "Jeddah Corniche Road",
+    "city": "Jeddah",
+    "description": "A famous seaside road along the Red Sea coast.",
+    "cafes": "Dunkin, Caffeine Lab, Costa Coffee",
+    "restaurants": "Boston JED, OKTO, Niyyali",
+    "hotels": "The Venue, Hilton, Waldorf Astoria"
+  },
+  "ar": {
+    "name": "طريق كورنيش جدة",
+    "city": "جدة",
+    "description": "طريق سياحي مشهور يمتد على ساحل البحر الأحمر.",
+    "cafes": "Dunkin، Caffeine Lab، Costa Coffee",
+    "restaurants": "Boston JED، OKTO، Niyyali",
+    "hotels": "The Venue، Hilton، Waldorf Astoria"
+  },
+  "image": "images/JCR.jpg",
+  "cardColor": "#0A4D68",
+  "mapLink": "https://maps.app.goo.gl/89RA5ZceaZ4KpPMx7?g_st=ic"
+},
+"PS": {
+  "en": {
+    "name": "Palestine Street",
+    "city": "Jeddah",
+    "description": "A busy commercial street in central Jeddah.",
+    "cafes": "WhiteHeart, J52 Cafe, Talent Cafe",
+    "restaurants": "AlBaik, Kudu, Shawarmer",
+    "hotels": "Skoop Hotel, Mirnian Hotel, Odst Hotel"
+  },
+  "ar": {
+    "name": "شارع فلسطين",
+    "city": "جدة",
+    "description": "شارع تجاري حيوي في وسط مدينة جدة.",
+    "cafes": "WhiteHeart، J52 Cafe، Talent Cafe",
+    "restaurants": "AlBaik، Kudu، Shawarmer",
+    "hotels": "Skoop Hotel، Mirnian Hotel، Odst Hotel"
+  },
+  "image": "images/PS.jpg",
+  "cardColor": "#2E7D32",
+  "mapLink": "https://maps.app.goo.gl/1ADoPvARiFDic64a8?g_st=ic"
+}
+}

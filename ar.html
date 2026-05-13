@@ -15,8 +15,12 @@
    <a href="index.html" class="close-ar">Close Camera</a>
 
     <a id="mapBtn" class="map-btn" target="_blank">
-        Open Location
+    Open Location
     </a>
+
+    <button id="langBtn" class="lang-btn">
+    العربية
+    </button>
 
     <div class="zoom-controls">
     <button id="zoomInBtn">+</button>
@@ -58,6 +62,31 @@
                 </a-text>
 
             </a-entity>
+
+            <a-entity id="arabicCardKAR" class="info-card" position="0 0 0" rotation="-90 0 0" visible="false">
+
+        <a-plane position="0 0 -0.01"
+            width="5" height="2.8" color="#8B6B00"
+            material="opacity: 0.88; depthWrite: false">
+        </a-plane>
+
+        <a-plane position="1.6 0.4 0.01"
+            width="1.5" height="2.0" color="#ffffff">
+        </a-plane>
+
+        <a-image id="arabicStreetImageKAR"
+            position="1.6 0.4 0.02"
+            width="1.35" height="1.85">
+        </a-image>
+
+        <a-image id="arabicTextKAR"
+            position="-1.15 0.15 0.06"
+            width="2.4"
+            height="2.25">
+        </a-image>
+
+    </a-entity>
+
         </a-marker>
 
         <!-- JCR -->
@@ -89,6 +118,31 @@
                 </a-text>
 
             </a-entity>
+
+            <!-- كرت العربي JCR -->
+<a-entity id="arabicCardJCR" class="info-card" position="0 0 0" rotation="-90 0 0" visible="false">
+
+    <a-plane position="0 0 -0.01"
+        width="5" height="2.8" color="#0A4D68"
+        material="opacity: 0.92; depthWrite: false">
+    </a-plane>
+
+    <a-plane position="1.6 0.4 0.01"
+        width="1.5" height="2.0" color="#ffffff">
+    </a-plane>
+
+    <a-image id="arabicStreetImageJCR"
+        position="1.6 0.4 0.02"
+        width="1.35" height="1.85">
+    </a-image>
+
+    <a-image id="arabicTextJCR"
+        position="-1.15 0.15 0.06"
+        width="2.4"
+        height="2.25">
+    </a-image>
+
+</a-entity>
         </a-marker>
 
         <!-- PS -->
@@ -119,12 +173,36 @@
                 </a-text>
 
             </a-entity>
+
+            <!-- كرت العربي PS -->
+<a-entity id="arabicCardPS" class="info-card" position="0 0 0" rotation="-90 0 0" visible="false">
+
+    <a-plane position="0 0 -0.01"
+        width="5" height="2.8" color="#2E7D32"
+        material="opacity: 0.92; depthWrite: false">
+    </a-plane>
+
+    <a-plane position="1.6 0.4 0.01"
+        width="1.5" height="2.0" color="#ffffff">
+    </a-plane>
+
+    <a-image id="arabicStreetImagePS"
+        position="1.6 0.4 0.02"
+        width="1.35" height="1.85">
+    </a-image>
+
+    <a-image id="arabicTextPS"
+        position="-1.15 0.15 0.06"
+        width="2.4"
+        height="2.25">
+    </a-image>
+
+</a-entity>
         </a-marker>
 
         <a-entity camera></a-entity>
 
     </a-scene>
-    <script src="info.js"></script>
     <script src="ar.js"></script>
 
 
